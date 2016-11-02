@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:shopping-cart', 'Unit | Service | shopping cart', {
+moduleFor('service:watch-list', 'Unit | Service | watch list', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });

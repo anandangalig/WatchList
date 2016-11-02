@@ -1,1 +1,7 @@
-{{yield}}
+{{yield}} <!--below will change after subscribing to a specific API-->
+{{product.title}}
+{{product.image}}
+{{product.description}}
+{{product.cost}}
+
+<button {{action 'addToList' product}}>Add to Cart</button>
