@@ -1,0 +1,48 @@
+{
+  "from": 1,
+  "to": 10,
+  "total": 164,
+  "currentPage": 1,
+  "totalPages": 17,
+  "queryTime": "0.171",
+  "totalTime": "0.209",
+  "partial": false,
+  "canonicalUrl": "\/v1\/products(onSale=true&(categoryPath.id=abcat0502000))?show=name&sort=name.desc&format=json&facet=onSale,10&apiKey=dDNhiwh8mUbK6pzaUfGxynag",
+  "products": [
+    {
+      "name": "Toshiba - Satellite Radius 2-in-1 12.5\" 4K Ultra HD Touch-Screen Laptop - Intel Core i7 - 8GB Memory - 256GB Solid State Drive - Carbon Gray"
+    },
+    {
+      "name": "Samsung - Notebook 9 15\" Laptop - Intel Core i7 - 8GB Memory - 256 Solid State Drive - Iron Silver"
+    },
+    {
+      "name": "Samsung - Notebook 9 13.3\" Laptop - Intel Core i5 - 8GB Memory - 256GB Solid State Drive - Iron silver"
+    },
+    {
+      "name": "Samsung - Galaxy TabPro S 2-in-1 12\" Touch-Screen Laptop - 256GB - Gold"
+    },
+    {
+      "name": "MSI - GL72 6QF-405 17.3\" Laptop - Intel Core i7 - 8GB Memory - 1TB Hard Drive - Aluminum Black"
+    },
+    {
+      "name": "MSI - GE72 Apache Pro-070 17.3\" Laptop - Intel Core i7 - 16GB Memory - 1TB Hard Drive + 128GB Solid State Drive - Aluminum Black"
+    },
+    {
+      "name": "MSI - GE72 Apache Pro-029 17.3\" Laptop - Intel Core i7 - 16GB Memory - 1TB Hard Drive + 128GB Solid State Drive - Aluminum Black"
+    },
+    {
+      "name": "MSI - GE72 Apache Pro-003 17.3\" Laptop - Intel Core i7 - 16GB Memory - 1TB Hard Drive - Aluminum Black"
+    },
+    {
+      "name": "MSI - CX62 6QD 15.6\" Laptop - Intel Core i5 - 8GB Memory - 1TB Hard Drive - Black"
+    },
+    {
+      "name": "Microsoft - Surface Book 2-in-1 13.5\" Touch-Screen Laptop - Intel Core i5 - 8GB Memory - 128GB Solid State Drive - Silver"
+    }
+  ],
+  "facets": {
+    "onSale": {
+      "true": 164
+    }
+  }
+}
