@@ -13,12 +13,12 @@ module.exports = function(environment) {
       }
     },
 
-    firebase: {
-      apiKey: 'AIzaSyB1-vL6M3YvQoHidv_gYekq2XRrVDkhZa8',
-      authDomain: 'online-marketbase.firebaseapp.com',
-      databaseURL: 'https://online-marketbase.firebaseio.com',
-      storageBucket: 'online-marketbase.appspot.com'
-    },
+    // firebase: {
+    //   apiKey: 'AIzaSyB1-vL6M3YvQoHidv_gYekq2XRrVDkhZa8',
+    //   authDomain: 'online-marketbase.firebaseapp.com',
+    //   databaseURL: 'https://online-marketbase.firebaseio.com',
+    //   storageBucket: 'online-marketbase.appspot.com'
+    // },
 
     APP: {
       // Here you can pass flags/options to your application instance

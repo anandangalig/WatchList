@@ -5,7 +5,8 @@
 <main>
   <div class="contianer">
     <div class="col-sm-6">
-      {{#each model as |product|}}
+      <!-- {{model.products.name}} -->
+      {{#each model.products as |product|}}
         <p>{{product.name}}</p>
       {{/each}}
     </div>
