@@ -1,16 +1,22 @@
-import config from '../config/environment';
 import Ember from 'ember';
+import config from '../config/environment';
 
 export default Ember.Route.extend({
+  watchList: Ember.inject.service(),
+
+  actions: {
+    addToList(item) {
+      this.get('watchList').add(item);
+    },
+    checkSavedList() {
+      this.transitionTo('saved-list');
+    }
+  },
   model: function() {
     var key = config.myApiKey;
-    console.log(key);
-    var url = 'https://api.bestbuy.com/v1/products(onSale=true&(categoryPath.id=abcat0204000))?apiKey=' + key + '&format=json';
+    var url = 'https://api.bestbuy.com/v1/products((search=laptop)&onSale=true)?apiKey=' +key+ '&sort=name.asc&show=name,salePrice,regularPrice,image&format=json';
     return Ember.$.getJSON(url).then(function(responseJSON) {
       return responseJSON;
     });
   }
 });
-  // model() {
-  //   return this.store.findAll('product');
-  // },

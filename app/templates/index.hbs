@@ -1,14 +1,20 @@
 <header>
   <h1>Lemme Know!</h1>
 </header>
-
 <main>
-  <div class="contianer">
-    <div class="col-sm-6">
-      {{#each model.products as |product|}}
-        <p>{{product.name}}</p>
-      {{/each}}
+  <div class="container">
+    <div class="row">
+        {{#each model.products as |product|}}
+          <div class="col-sm-6">
+            <p>{{product.name}}</p>
+            <p>Original Price: {{product.regularPrice}}</p>
+            <p>Sale Price: {{product.salePrice}}</p>
+            <img class="product-img" src="{{product.image}}">
+            <button class="btn btn-success" {{action 'addToList' product}}>Add to Watch List</button>
+          </div>
+        {{/each}}
     </div>
+    <button class="btn btn-info" {{action 'checkSavedList'}}>See My List</button>
   </div>
 </main>
 

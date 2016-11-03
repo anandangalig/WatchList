@@ -17,6 +17,10 @@ header h1 {
   margin: 0;
 }
 
+.product-img {
+  width: 50px;
+}
+
 footer {
   display: flex;
   position: fixed;
