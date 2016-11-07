@@ -7,8 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('saved-list', {path: 'saved-list/:saved-list_id'});
   this.route('login');
-  this.route('saved-list');
 });
 
 export default Router;

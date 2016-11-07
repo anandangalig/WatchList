@@ -1,0 +1,5 @@
+{{#if session.isAuthenticated}}
+  {{action 'saved-list'}}
+{{else}}
+  {{action 'login'}}
+{{/if}}
