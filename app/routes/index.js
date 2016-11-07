@@ -12,8 +12,7 @@ export default Ember.Route.extend({
       this.transitionTo('saved-list');
     },
     sendEmail() {
-      // parameters: service_id, template_id, template_parameters
-      emailjs.send("watchlist_gmail","template_Bs6RM6oG",{name: "Anand", notes: "Check this out!"});
+      emailjs.send("watchlist_gmail","template_Bs6RM6oG",{ to_name: "Anand", user_email: "anandangalig@gmail.com", product_name: "Apple MacBookPro 13-inch"});
     }
   },
   model: function() {
