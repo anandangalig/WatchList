@@ -4,6 +4,8 @@ import config from '../config/environment';
 export default Ember.Route.extend({
   watchList: Ember.inject.service(),
 
+  hideNavBar: true,
+
   actions: {
     addToList(item) {
       this.get('watchList').add(item);
