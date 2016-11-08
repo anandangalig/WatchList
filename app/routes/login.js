@@ -11,6 +11,9 @@ export default Ember.Route.extend({
       this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
         this.set('errorMessage', reason.error || reason);
       });
+    },
+    routeToCreateAccount() {
+      this.transitionTo('create-account');
     }
   }
 });

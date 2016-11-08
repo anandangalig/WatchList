@@ -1,13 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  session: Ember.inject.service('session'),
   model() {
-    return this.store.findAll('user');
+
   },
   actions: {
-    createAccount() {
-      
+    saveAccount(params) {
+      var newAccount = this.store.createRecord('user', params);
+      newAccount.save();
+      this.transitionTo('login');
+    },
+    routeToLogin() {
+      this.transitionTo('login');
     }
   }
 });
