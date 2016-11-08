@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyDdp9zcOrWRkViTrW_I5S4-B7ON-AVhaGY",
+      authDomain: "watch-list-user-test.firebaseapp.com",
+      databaseURL: "https://watch-list-user-test.firebaseio.com",
+      storageBucket: "watch-list-user-test.appspot.com"
+    },
+
     // firebase: {
     //   apiKey: 'AIzaSyAiud1xLgcO1wObQuQWkUp42oKExUZwtic',
     //   authDomain: 'watchlist-f03db.firebaseapp.com',

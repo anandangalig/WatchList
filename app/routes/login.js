@@ -1,9 +1,10 @@
-//set up authentication method which provides authenticationSucceeded and invalidationSucceeded events that are triggered when the session is either successfully autheticated or invalidated
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Route.extend({
   session: Ember.inject.service('session'),
-
+  model() {
+    return this.store.findAll('user');
+  },
   actions: {
     authenticate() {
       let { identification, password } = this.getProperties('identification', 'password');

@@ -1,0 +1,17 @@
+{ "users": [{
+    "firstName": "Ian",
+    "lastName": "Baum",
+    "identification": "ian@ianbaum.com",
+    "password": "ian"
+  }, {
+    "firstName": "Rebecca",
+    "lastName": "Allen",
+    "identification": "rebeccazarsky@gmail.com",
+    "password": "cats"
+  }, {
+    "firstName": "Uma",
+    "lastName": "Allen",
+    "identification": "uma@nurnackle.net",
+    "password": "meow"
+  }]
+}

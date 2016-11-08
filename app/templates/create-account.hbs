@@ -1,0 +1,13 @@
+<h1>WatchList</h1>
+
+<!-- set up form to create user -->
+<form {{action 'createAccount' on='submit'}}>
+  <ul>
+    <li>{{input value=firstName id="firstName" placeholder='First Name'}} {{input value=lastName id="lastName" placeholder='Last Name'}}</li>
+    <li>{{input value=identification id="identification" placeholder='Enter Your Email'}}</li>
+    <li>{{input value=password id="password" placeholder='Enter a Password'}}</li>
+  </ul>
+  <button type="submit">Login</button>
+</form>
+
+<button {{action 'route-to-login'}}>Go Back to Login</button>
