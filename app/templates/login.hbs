@@ -1,13 +1,5 @@
 <h1>WatchList</h1>
 
-<!-- set up form to authenticate user logins -->
-<form {{action 'authenticate' on='submit'}}>
-  {{input id='identification' placeholder='Enter Your Email Address' value=identification}}
-  {{input id='password' placeholder='Enter Your Password' type='password' value=password}}
-  <button type="submit">Login</button>
-  {{#if errorMessage}}
-    <p>{{errorMessage}}</p>
-  {{/if}}
-</form>
+{{login-form authenticate="authenticate"}}
 
 <button {{action 'routeToCreateAccount'}}>Or Create An Account</button>

@@ -6,12 +6,6 @@ export default Ember.Route.extend({
     return this.store.findAll('user');
   },
   actions: {
-    authenticate() {
-      let { identification, password } = this.getProperties('identification', 'password');
-      this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
-        this.set('errorMessage', reason.error || reason);
-      });
-    },
     routeToCreateAccount() {
       this.transitionTo('create-account');
     }
