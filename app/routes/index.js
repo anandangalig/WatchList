@@ -15,13 +15,19 @@ export default Ember.Route.extend({
     },
     sendEmail() {
       emailjs.send("watchlist_gmail","template_Bs6RM6oG",{ to_name: "Anand", user_email: "anandangalig@gmail.com", product_name: "Apple MacBookPro 13-inch"});
+    },
+
+    searchBestBuy(url) {
+      console.log(url);
+      console.log(url.request);
+      this.transitionTo('results', url);
     }
   },
-  model: function() {
-    var key = config.myApiKey;
-    var url = 'https://api.bestbuy.com/v1/products((search=laptop)&onSale=true)?apiKey=' +key+ '&sort=name.asc&show=name,salePrice,regularPrice,image&format=json';
-    return Ember.$.getJSON(url).then(function(responseJSON) {
-      return responseJSON;
-    });
-  }
+  // model: function() {
+  //   var key = config.myApiKey;
+  //   var url = 'https://api.bestbuy.com/v1/products((search=laptop)&onSale=true)?apiKey=' +key+ '&sort=name.asc&show=name,salePrice,regularPrice,image&format=json';
+  //   return Ember.$.getJSON(url).then(function(responseJSON) {
+  //     return responseJSON;
+  //   });
+  // }
 });

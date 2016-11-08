@@ -6,12 +6,14 @@
     <a class="navbar-brand">WatchList</a>
   </div>
 
+  {{#unless hideSearch}}
   <form class="navbar-form navbar-right">
     <div class="form-group">
       {{input type="text" value=keywords class="form-control" placeholder="Search"}}
     </div>
     <button {{action 'searchBestBuy'}} type="submit" class="btn btn-default">Search</button>
   </form>
+  {{/unless}}
 
 </div>
 </nav>

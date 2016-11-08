@@ -8,6 +8,8 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('saved-list');
+  this.route('refresh');
+  this.route('results', {path: '/results/:request'});
 });
 
 export default Router;

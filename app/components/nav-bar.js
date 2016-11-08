@@ -15,8 +15,14 @@ export default Ember.Component.extend({
           outputString += "&search=" + word;
         }
       });
-      var url = "https://api.bestbuy.com/v1/products((" + outputString + ")&)?apiKey=" + apiKey + "&format=json";
+
+      console.log(apiKey);
+      var url = {
+        request: 'https://api.bestbuy.com/v1/products((' + outputString + '))?apiKey=' + apiKey + '&sort=sku.asc&show=sku,regularPrice,thumbnailImage,upc,salePrice,name,description,image,modelNumber,onSale&facet=color&format=json'
+      };
+
       console.log(url);
-    },
+      this.sendAction('searchBestBuy', url);
+    }
   }
 });
