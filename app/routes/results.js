@@ -1,14 +1,19 @@
 import Ember from 'ember';
-// import config from '../config/environment';
 
 export default Ember.Route.extend({
-  model: function(url) {
-    console.log(url);
-    // var key = config.myApiKey;
-    // var url = 'https://api.bestbuy.com/v1/products((search=laptop)&onSale=true)?apiKey=' +key+ '&sort=name.asc&show=name,salePrice,regularPrice,image&format=json';
-    return Ember.$.getJSON(url.request).then(function(responseJSON) {
+  model: function(objectFromRouter) {
+    var query = objectFromRouter.request
+    console.log(objectFromRouter.request);
+    return Ember.$.getJSON(query).then(function(responseJSON) {
       console.log(responseJSON);
       return responseJSON;
     });
   }
 });
+
+// model: function(params) {
+//   var url = 'http://congress.api.sunlightfoundation.com/legislators/locate?apikey=[YOUR_API_KEY_HERE]&zip=' + params.zip;
+//   return Ember.$.getJSON(url).then(function(responseJSON) {
+//     return responseJSON.results;
+//   });
+//  }

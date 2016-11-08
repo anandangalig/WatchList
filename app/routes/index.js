@@ -20,7 +20,7 @@ export default Ember.Route.extend({
     searchBestBuy(url) {
       console.log(url);
       console.log(url.request);
-      this.transitionTo('results', url);
+      this.transitionTo('results', url.request);
     }
   },
   // model: function() {

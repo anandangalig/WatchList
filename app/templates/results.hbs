@@ -1,6 +1,13 @@
-{{nav-bar}}
-<h1>helloooo</h1>
-{{#each model.products as |product|}}
-  <p>{{product.name}}</p>
-  <img class="product-img" src="{{product.image}}">
-{{/each}}
+<div class="container">
+  <h1>Results:</h1>
+  {{#if model.products}}
+    {{#each model.products as |product|}}
+      <div class="col-sm-6">
+        <p>{{product.name}}</p>
+        <img class="product-img" src="{{product.image}}">
+      </div>
+    {{/each}}
+  {{else}}
+    ¯\_(ツ)_/¯
+  {{/if}}
+</div>
