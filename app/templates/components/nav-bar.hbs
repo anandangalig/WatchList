@@ -6,7 +6,7 @@
     {{#link-to 'index'}}<a class="navbar-brand">WatchList</a>{{/link-to}}
   </div>
   <div class="navbar-header">
-    {{#link-to 'saved-list'}}<a class="navbar-brand">My List</a>{{/link-to}}
+    {{#link-to 'saved-list'}}<a class="navbar-text">My List</a>{{/link-to}}
   </div>
 
   {{#unless hideSearch}}
@@ -14,7 +14,7 @@
     <div class="form-group">
       {{input type="text" value=keywords class="form-control" placeholder="Search"}}
     </div>
-    <button {{action 'searchBestBuy'}} type="submit" class="btn btn-default">Search</button>
+    <button {{action 'searchBestBuy'}} type="submit">Search</button>
   </form>
   {{/unless}}
 
