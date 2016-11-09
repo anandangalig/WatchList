@@ -13,12 +13,12 @@ module.exports = function(environment) {
       }
     },
 
-    // firebase: {
-    //   apiKey: 'AIzaSyAiud1xLgcO1wObQuQWkUp42oKExUZwtic',
-    //   authDomain: 'watchlist-f03db.firebaseapp.com',
-    //   databaseURL: 'https://watchlist-f03db.firebaseio.com',
-    //   storageBucket: ''
-    // },
+    firebase: {
+      apiKey: 'AIzaSyAiud1xLgcO1wObQuQWkUp42oKExUZwtic',
+      authDomain: 'watchlist-f03db.firebaseapp.com',
+      databaseURL: 'https://watchlist-f03db.firebaseio.com',
+      storageBucket: ''
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

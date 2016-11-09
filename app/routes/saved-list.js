@@ -5,6 +5,11 @@ export default Ember.Route.extend({
   model: function() {
     console.log(this.watchList);
     return this.watchList.items;
+  },
+  actions:{
+    searchBestBuy(url) {
+      this.transitionTo('results', url.request);
+    }
   }
 
 });

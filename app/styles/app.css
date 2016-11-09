@@ -18,7 +18,8 @@ header h1 {
 }
 
 .product-img {
-  width: 50px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 footer {
@@ -40,5 +41,28 @@ footer p {
 
 .navbar-default {
   border-radius: 0;
-  
+
+}
+
+.resultPanel{
+  width: 250px;
+  background-color: #aaa;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  height:400px;
+}
+
+.saletag{
+  background-color: #eee;
+  border-radius: 4px;
+  border: 2px solid #aaddaa;
+  padding: 0;
+}
+
+button{
+  border-radius: 4px;
+  border-style: none;
+  background-color: #2980B9;
+  color: #eeeeff
 }

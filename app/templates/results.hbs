@@ -1,10 +1,18 @@
+{{nav-bar searchBestBuy="searchBestBuy"}}
 <div class="container">
   <h1>Results:</h1>
   {{#if model.products}}
     {{#each model.products as |product|}}
-      <div class="col-sm-6">
-        <p>{{product.name}}</p>
+      <div class="col-sm-6 resultPanel">
         <img class="product-img" src="{{product.image}}">
+        <p>{{product.name}}</p>
+        <p>Normal Price: ${{product.regularPrice}}</p>
+        {{#if product.onSale}}
+          <p class="saletag">On Sale: ${{product.salePrice}}</p>
+          {{else}}
+          <button {{action 'addToList' product}}>Watch This!</button>
+        {{/if}}
+
       </div>
     {{/each}}
   {{else}}
