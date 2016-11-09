@@ -1,9 +1,9 @@
 <!-- set up form to create user -->
 <form {{action 'saveAccount' on='submit'}}>
   <ul>
-    <li>{{input value=firstName id="firstName" placeholder='First Name'}} {{input value=lastName id="lastName" placeholder='Last Name'}}</li>
+    <li>{{input class="nameInput"value=firstName id="firstName" placeholder='First Name'}} {{input class="nameInput" value=lastName id="lastName" placeholder='Last Name'}}</li>
     <li>{{input value=identification id="identification" placeholder='Enter Your Email'}}</li>
     <li>{{input value=password id="password" placeholder='Enter a Password'}}</li>
   </ul>
-  <button type="submit">Create Account</button>
+  <button type="submit">CREATE ACCOUNT</button>
 </form>

@@ -2,6 +2,15 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  background:
+radial-gradient(#222d38 15%, transparent 16%) 0 0,
+radial-gradient(#222d38 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color: rgb(42,67,78);
+background-size:16px 16px;
 }
 
 header {
@@ -37,4 +46,50 @@ footer {
 footer p {
   margin: 15px 0;
   padding: 0;
+}
+
+input{
+  border-radius: 3px;
+  border-style: none;
+  width:300px;
+  margin:10px 0;
+  padding:5px;
+  font-size: 1.2em;
+  box-shadow: 8px 8px 0px rgba(30, 30, 30, 0.5);
+}
+
+.nameInput{
+  width:149px;
+
+}
+
+.loginTitle{
+  color: #EDF0F1;
+  font-weight: bold;
+  font-size: 6em;
+  margin: 15% 0;
+}
+
+button{
+  background-color: #5097D5;
+  border: none;
+  border-radius: 8px;
+  color: #EDF0F1;
+  font-size: 1.5em;
+  padding: 2px 15px;
+  margin:5px;
+
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CCC;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #CCC;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: #CCC;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #CCC;
 }
