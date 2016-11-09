@@ -14,10 +14,10 @@ module.exports = function(environment) {
     },
 
     // firebase: {
-    //   apiKey: 'AIzaSyB1-vL6M3YvQoHidv_gYekq2XRrVDkhZa8',
-    //   authDomain: 'online-marketbase.firebaseapp.com',
-    //   databaseURL: 'https://online-marketbase.firebaseio.com',
-    //   storageBucket: 'online-marketbase.appspot.com'
+    //   apiKey: 'AIzaSyAiud1xLgcO1wObQuQWkUp42oKExUZwtic',
+    //   authDomain: 'watchlist-f03db.firebaseapp.com',
+    //   databaseURL: 'https://watchlist-f03db.firebaseio.com',
+    //   storageBucket: ''
     // },
 
     APP: {
@@ -48,7 +48,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    
+
   }
 
   return ENV;

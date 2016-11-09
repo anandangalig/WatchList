@@ -1,1 +1,13 @@
-{{outlet}}
+<!-- navbar and header goes here -->
+<div class="menu">
+  <!-- call the invalidateSession method when session is autheticated, link to the login when it is unauthenticated -->
+  {{#if session.isAuthenticated}}
+    <a {{action 'invalidateSession'}}>Logout</a>
+  {{else}}
+    {{#link-to 'login'}}Login{{/link-to}}
+  {{/if}}
+</div>
+<!-- main body of application goes here -->
+<div class="main">
+  {{outlet}}
+</div>
