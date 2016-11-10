@@ -1,10 +1,10 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
+export default Ember.Route.extend(AuthenticatedRouteMixin);
 export default Ember.Route.extend({
   watchList: Ember.inject.service(),
-  model: function() {
-    console.log(this.watchList);
-    return this.watchList.items;
+  model(params) {
+    return this.store.findRecord('user', params.user_id);
   }
-
 });

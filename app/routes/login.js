@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import SessionService from 'ember-simple-auth/services/session';
 
 export default Ember.Route.extend({
   session: Ember.inject.service('session'),
@@ -10,10 +9,16 @@ export default Ember.Route.extend({
     routeToCreateAccount() {
       this.transitionTo('create-account');
     },
+
     authenticate() {
+      var user = {
+        identification: this.get('identification'),
+        password: this.get('password')
+      };
       let { identification, password } = this.getProperties('identification', 'password');
       this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
         this.set('errorMessage', reason.error || reason);
+        this.transitionTo('saved-list', params);
       });
     }
   }
