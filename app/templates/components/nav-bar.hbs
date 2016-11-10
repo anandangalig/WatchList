@@ -9,7 +9,22 @@
   {{#unless hideSearch}}
   <form class="navbar-form navbar-right">
     <div class="form-group">
+
+      <select disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
+        {{#if prompt}}
+          <option disabled selected={{is-not selection}}>
+            {{prompt}}
+          </option>
+        {{/if}}
+        {{#each content as |item|}}
+          <option value={{read-path item optionValuePath}}>
+            {{read-path item optionLabelPath}}
+          </option>
+        {{/each}}
+      </select>
+
       {{input type="text" value=keywords class="form-control" placeholder="Search"}}
+      
     </div>
     <button {{action 'searchBestBuy'}} type="submit" class="btn btn-default">Search</button>
   </form>

@@ -1,7 +1,18 @@
-{{nav-bar}}
+{{nav-bar
+  content=myContent
+  selection=selectedOption
+  disabled=shouldDisable
+  optionLabelPath="label"
+  optionValuePath="value"
+  prompt="Select a category"
+  class='my-ember-select-widget'
+  willChangeAction='selectOption'
+  didChangeAction='anotherAction'
+}}
+
 <div class="container">
   <h1>Hello</h1>
 
   {{display-list}}
-  
+
 </div>
