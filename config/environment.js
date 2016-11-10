@@ -32,8 +32,14 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-  ENV['ember-simple-auth'] = {
-    authenticationRoute: 'login'
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: '/api/token-auth/',
+    identificationField: 'identification',
+    passwordField: 'password',
+    tokenPropertyName: 'token',
+    authorizationPrefix: 'Bearer ',
+    authorizationHeaderName: 'Authorization',
+    headers: {},
   };
 
   if (environment === 'development') {

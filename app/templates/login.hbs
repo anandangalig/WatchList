@@ -1,4 +1,3 @@
-
 <h1 class="loginTitle">WatchList</h1>
 
 <form {{action 'authenticate' on='submit'}}>
@@ -6,9 +5,5 @@
   <p>{{input id='password' placeholder='Password' type='password' value=password}}</p>
   <button type="submit">LOGIN</button>
 </form>
-
-{{#if errorMessage}}
-  <p>Login failed: {{errorMessage}}</p>
-{{/if}}
 
 <button {{action 'routeToCreateAccount'}}>CREATE ACCOUNT</button>

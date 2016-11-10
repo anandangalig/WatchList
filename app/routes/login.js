@@ -1,25 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  session: Ember.inject.service('session'),
-  model() {
-    return this.store.findAll('user');
-  },
+  authManager: Ember.inject.service('session'),
   actions: {
+    authenticate() {
+      const { identification, password } = this.getProperties('identification', 'password');
+      this.get('authManager').authenticate(identification, password).then(() => {
+        alert('Success! Click the top link!');
+      }, (err) => {
+        alert('Error obtaining token: ' + err.responseText);
+      });
+    //   var credentials = this.getProperties('identification', 'password'),
+    //     authenticator = 'authenticator:token';
+    //   this.get('session').authenticate(authenticator, credentials);
+    },
     routeToCreateAccount() {
       this.transitionTo('create-account');
-    },
-
-    authenticate() {
-      var user = {
-        identification: this.get('identification'),
-        password: this.get('password')
-      };
-      let { identification, password } = this.getProperties('identification', 'password');
-      this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
-        this.set('errorMessage', reason.error || reason);
-        this.transitionTo('saved-list', params);
-      });
     }
   }
 });

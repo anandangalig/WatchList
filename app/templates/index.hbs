@@ -1,6 +1,10 @@
-<!-- {{#if session.isAuthenticated}}
-  {{action 'saved-list'}}
-{{else}}
-  {{action 'login'}}
-{{/if}} -->
-<button>{{#link-to 'login'}}Login{{/link-to}}</button>
+<h1 class="loginTitle">WatchList</h1>
+
+<form {{action 'authenticate' on='submit'}}>
+  <p>{{input id='identification' placeholder='Email' value=identification}}</p>
+  <p>{{input id='password' placeholder='Password' type='password' value=password}}</p>
+  <button type="submit">LOGIN</button>
+</form>
+
+
+<button {{action 'routeToCreateAccount'}}>CREATE ACCOUNT</button>
