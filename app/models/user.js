@@ -4,5 +4,6 @@ export default DS.Model.extend({
   firstName: DS.attr(),
   lastName: DS.attr(),
   identification: DS.attr(),
-  password: DS.attr()
+  password: DS.attr(),
+  product: DS.hasMany('product', {async:true})
 });

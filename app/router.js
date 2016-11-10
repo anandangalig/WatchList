@@ -9,9 +9,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('create-account');
-  this.route('saved-list');
-  this.route('refresh');
-  this.route('results', {path: '/results/:request'});
+  // this.route('saved-list');
+  // this.route('refresh');
+  // this.route('results', {path: '/results/:request'});
 });
 
 export default Router;

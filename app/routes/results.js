@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(objectFromRouter) {
-    var query = objectFromRouter.request
+    var query = objectFromRouter.request;
     console.log(objectFromRouter.request);
     return Ember.$.getJSON(query).then(function(responseJSON) {
       console.log(responseJSON);
