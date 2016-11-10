@@ -4,7 +4,8 @@
     {{#each model.products as |product|}}
       <div class="col-sm-6">
         <p>{{product.name}}</p>
-        <img class="product-img" src="{{product.image}}">
+        <img class="product-img" src="{{product.thumbnailImage}}">
+        
       </div>
     {{/each}}
   {{else}}
