@@ -1,11 +1,13 @@
-<!-- set up form to authenticate user logins -->
+<h1 class="loginTitle">WatchList</h1>
+
 <form {{action 'authenticate' on='submit'}}>
-  <label for="identification">Login</label>
-  {{input id='identification' placeholder='Enter Your Email Address' value=identification}}
-  <label for='password'>Password</label>
-  {{input id='password' placeholder='Enter Your Password' type='password' value=password}}
-  <button type="submit">Login</button>
-  {{#if errorMessage}}
-    <p>{{errorMessage}}</p>
-  {{/if}}
+  <p>{{input id='identification' placeholder='Email' value=identification}}</p>
+  <p>{{input id='password' placeholder='Password' type='password' value=password}}</p>
+  <button type="submit">LOGIN</button>
 </form>
+
+{{#if errorMessage}}
+  <p>Login failed: {{errorMessage}}</p>
+{{/if}}
+
+<button {{action 'routeToCreateAccount'}}>CREATE ACCOUNT</button>

@@ -3,6 +3,9 @@ body {
   padding: 0;
 }
 
+.white-text {
+  color: white;
+}
 .product-img {
   max-width: 200px;
   max-height: 200px;
@@ -15,11 +18,15 @@ body {
 
 .resultPanel{
   width: 250px;
-  background-color: #aaa;
+  background-color: #FFF;
   margin: 5px;
   padding: 5px;
   text-align: center;
   height:400px;
+}
+
+a{
+  color: #333;
 }
 
 .saletag{
@@ -49,3 +56,80 @@ button{
   text-decoration: none;
   color: #eee;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background:
+radial-gradient(#222d38 15%, transparent 16%) 0 0,
+radial-gradient(#222d38 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color: rgb(42,67,78);
+background-size:16px 16px;
+color: #333;
+}
+
+input{
+  border-radius: 3px;
+  border-style: hidden;
+  width:300px;
+  margin:10px 0;
+  padding:5px;
+  font-size: 1.2em;
+  color: #333;
+  box-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.nameInput{
+  width:149px;
+
+}
+
+.my-ember-select-widget{
+  color: #333;
+}
+
+.loginTitle{
+  color: #EDF0F1;
+  font-weight: lighter;
+  font-size: 6em;
+  margin: 15% 0;
+  text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+button{
+  background-color: #5097D5;
+  border: none;
+  border-radius: 8px;
+  color: #EDF0F1;
+  font-size: 1.5em;
+  font-weight: lighter;
+  padding: 2px 15px;
+  margin:10px 5px;
+  box-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+
+}
+h1{
+  color: white;
+}
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CCC;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #CCC;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: #CCC;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #CCC;

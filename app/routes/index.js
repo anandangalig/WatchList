@@ -12,6 +12,8 @@ export default Ember.Route.extend({
   //   return this._super();
   // },
 
+
+
   actions: {
     addToList(item) {
       this.get('watchList').add(item);
