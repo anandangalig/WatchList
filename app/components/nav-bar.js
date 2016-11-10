@@ -15,7 +15,7 @@ export default Ember.Component.extend({
       this.set('content', []);
     }
   },
-  
+
 actions: {
     change: function() {
       let selectedIndex = this.$('select')[0].selectedIndex;
@@ -56,7 +56,7 @@ actions: {
 
       console.log(apiKey);
       var url = {
-        request: "https://api.bestbuy.com/v1/products((" + outputString + ")&(categoryPath.id=" + selectedCategory + "))?apiKey=" + apiKey + "&sort=bestSellingRank.dsc&show=name,salePrice,regularPrice,description,bestSellingRank,onSale,upc,url,thumbnailImage,dollarSavings&pageSize=100&format=json"
+        request: "https://api.bestbuy.com/v1/products((" + outputString + ")&(categoryPath.id=" + selectedCategory + "))?apiKey=" + apiKey + "&sort=bestSellingRank.dsc&show=name,salePrice,regularPrice,description,bestSellingRank,onSale,upc,url,image,dollarSavings&pageSize=100&format=json"
       };
 
       console.log(url.request);

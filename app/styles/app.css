@@ -3,42 +3,49 @@ body {
   padding: 0;
 }
 
-header {
-  width: 100%;
-  height: 75px;
-  margin: 0 0 30px 0;
-  padding: 20px;
-  font-family: 'Ranchers', cursive;
-  background-color: #333;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-}
-
 .product-img {
-  width: 50px;
-}
-
-footer {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  justify-content: center;
-  font-family: 'Ranchers', cursive;
-  background-color: #333;
-  color: white;
-}
-
-footer p {
-  margin: 15px 0;
-  padding: 0;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .navbar-default {
   border-radius: 0;
-  
+
+}
+
+.resultPanel{
+  width: 250px;
+  background-color: #aaa;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  height:400px;
+}
+
+.saletag{
+  background-color: #eee;
+  border-radius: 4px;
+  border: 2px solid #aaddaa;
+  padding: 0;
+}
+
+button{
+  border-radius: 4px;
+  border-style: none;
+  background-color: #2980B9;
+  color: #eeeeff;
+}
+
+
+.navbar{
+  background-color: #2C3E50;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-text {
+    color: #eee;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-text:hover{
+  text-decoration: none;
+  color: #eee;
 }

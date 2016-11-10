@@ -1,11 +1,31 @@
+{{nav-bar
+  content=myContent
+  selection=selectedOption
+  disabled=shouldDisable
+  optionLabelPath="label"
+  optionValuePath="value"
+  prompt="Select a category"
+  class='my-ember-select-widget'
+  willChangeAction='selectOption'
+  didChangeAction='anotherAction'
+
+  searchBestBuy="searchBestBuy"
+}}
+
 <div class="container">
   <h1>Results:</h1>
   {{#if model.products}}
     {{#each model.products as |product|}}
-      <div class="col-sm-6">
-        <p>{{product.name}}</p>
-        <img class="product-img" src="{{product.thumbnailImage}}">
-        
+      <div class="col-sm-6 resultPanel">
+        <a href={{product.url}}><img class="product-img" src="{{product.image}}">
+        <p>{{product.name}}</p></a>
+        <p>Normal Price: ${{product.regularPrice}}</p>
+        {{#if product.onSale}}
+          <p class="saletag">On Sale: ${{product.salePrice}}</p>
+          <p>You save ${{product.dollarSavings}}!</p>
+          {{else}}
+          <button {{action 'addToList' product}}>Watch This!</button>
+        {{/if}}
       </div>
     {{/each}}
   {{else}}
