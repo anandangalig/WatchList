@@ -3,10 +3,10 @@
 <div class="container-fluid">
 
   <div class="navbar-header">
-    {{#link-to 'index'}}<a class="navbar-brand">WatchList</a>{{/link-to}}
+    {{#link-to 'index'}}<a class="navbar-brand">WatchList </a>{{/link-to}}
   </div>
   <div class="navbar-header">
-    {{#link-to 'saved-list'}}<a class="navbar-text">My List</a>{{/link-to}}
+    {{#link-to 'saved-list'}}<a class="navbar-brand"> My List</a>{{/link-to}}
   </div>
 
   {{#unless hideSearch}}
@@ -27,9 +27,8 @@
       </select>
 
       {{input type="text" value=keywords class="form-control" placeholder="Keyword(s)"}}
-
+      <button class='btn btn-warning'{{action 'searchBestBuy'}} type="submit">Search</button>
     </div>
-    <button {{action 'searchBestBuy'}} type="submit">Search</button>
   </form>
   {{/unless}}
 
