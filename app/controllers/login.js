@@ -2,7 +2,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  session: Ember.inject.service('session'),
   shouldDisabled: false,
   myContent: [
     {label: "Cell Phones with Plans", value: "pcmcat209400050001"},
@@ -26,15 +25,5 @@ export default Ember.Controller.extend({
     {label: "Washers and Dryers", value: "abcat0910000"},
     {label: "Wii U", value: "pcmcat273800050036"},
     {label: "Xbox One", value: "pcmcat300300050002"}
-  ],
-
-
-  actions: {
-    authenticate() {
-      let { identification, password } = this.getProperties('identification', 'password');
-      this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
-        this.set('errorMessage', reason.error || reason);
-      });
-    }
-  }
+  ]
 });

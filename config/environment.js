@@ -14,10 +14,10 @@ module.exports = function(environment) {
     },
 
     firebase: {
-      apiKey: 'AIzaSyAiud1xLgcO1wObQuQWkUp42oKExUZwtic',
-      authDomain: 'watchlist-f03db.firebaseapp.com',
-      databaseURL: 'https://watchlist-f03db.firebaseio.com',
-      storageBucket: ''
+      apiKey: "AIzaSyCOH08vTkzzi_DPXCGln8NNCtLlIXAf0UM",
+      authDomain: "watchlist-db594.firebaseapp.com",
+      databaseURL: "https://watchlist-db594.firebaseio.com",
+      storageBucket: "watchlist-db594.appspot.com"
     },
 
     APP: {

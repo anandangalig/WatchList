@@ -8,20 +8,16 @@
   class='my-ember-select-widget'
   willChangeAction='selectOption'
   didChangeAction='anotherAction'
-
+  
   searchBestBuy="searchBestBuy"
 }}
 
 <h1 class="loginTitle">WatchList</h1>
-
-<form {{action 'authenticate' on='submit'}}>
-  <p>{{input id='identification' placeholder='Email' value=identification}}</p>
-  <p>{{input id='password' placeholder='Password' type='password' value=password}}</p>
-  <button type="submit">LOGIN</button>
-</form>
-
-{{#if errorMessage}}
-  <p>Login failed: {{errorMessage}}</p>
-{{/if}}
-
-<button {{action 'routeToCreateAccount'}}>CREATE ACCOUNT</button>
+<div>
+  <div>
+    <p><input type="text" id="email" name="email" placeholder="Email"/></p>
+    <p><input type="password" id="password" name="password" placeholder="Password"/></p>
+    <button disabled id="quickstart-sign-in" name="signin">Sign In</button>
+    <button id="quickstart-sign-up" name="signup">Sign Up</button>
+  </div>
+</div>

@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('saved-list');
   this.route('refresh');
   this.route('results', {path: '/results/:request'});
+  this.route('create-account');
 });
 
 export default Router;
