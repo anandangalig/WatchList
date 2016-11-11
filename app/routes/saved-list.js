@@ -9,6 +9,12 @@ export default Ember.Route.extend({
   actions:{
     searchBestBuy(url) {
       this.transitionTo('results', url.request);
+    },
+    sendEmail() {
+      emailjs.send("watchlist_gmail","template_Bs6RM6oG",{ to_name: "Anand", user_email: "anandangalig@gmail.com", product_name: "Apple MacBookPro 13-inch"});
+    },
+    deleteProduct(item) {
+      this.get('watchList').remove(item);
     }
   }
 

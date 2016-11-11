@@ -13,8 +13,10 @@
 }}
 
 <div class="container">
+  <button class="btn btn-success" {{action 'sendEmail'}}>Send Email</button>
+
   <h1>My WatchList</h1>
 
-  {{display-list}}
+  {{display-list deleteProduct="deleteProduct"}}
 
 </div>

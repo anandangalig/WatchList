@@ -11,20 +11,3 @@
 
   searchBestBuy="searchBestBuy"
 }}
-
-<main>
-  <div class="container">
-    <div class="row">
-        {{#each model.products as |product|}}
-          <div class="col-sm-6">
-            <p>{{product.name}}</p>
-            <p>Original Price: {{product.regularPrice}}</p>
-            <p>Sale Price: {{product.salePrice}}</p>
-            <img class="product-img" src="{{product.image}}">
-            <button class="btn btn-success" {{action 'addToList' product}}>Add to Watch List</button>
-          </div>
-        {{/each}}
-    </div>
-    <button class="btn btn-success" {{action 'sendEmail'}}>Send Email</button>
-  </div>
-</main>

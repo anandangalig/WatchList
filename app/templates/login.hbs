@@ -1,3 +1,17 @@
+{{nav-bar
+  content=myContent
+  selection=selectedOption
+  disabled=shouldDisable
+  optionLabelPath="label"
+  optionValuePath="value"
+  prompt="Select a category"
+  class='my-ember-select-widget'
+  willChangeAction='selectOption'
+  didChangeAction='anotherAction'
+
+  searchBestBuy="searchBestBuy"
+}}
+
 <h1 class="loginTitle">WatchList</h1>
 
 <form {{action 'authenticate' on='submit'}}>
