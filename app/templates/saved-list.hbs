@@ -12,10 +12,13 @@
   searchBestBuy="searchBestBuy"
 }}
 
-<div class="container">
-  <button class="btn btn-success" {{action 'sendEmail'}}>Send Email</button>
 
+<div class="container">
   <h1>My WatchList</h1>
+  <div id="testemail">
+    <p>This part of the App uses Email.js to send sale alerts to users if an item from their WatchList goes on SALE.</p>
+    <button class="btn btn-lg btn-success" {{action 'sendEmail'}}>Send Test Email</button>
+  </div>
 
   {{display-list deleteProduct="deleteProduct"}}
 

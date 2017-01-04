@@ -3,9 +3,7 @@ import config from '../config/environment';
 
 export default Ember.Route.extend({
   watchList: Ember.inject.service(),
-  beforeModel: function() {
-    this.transitionTo('login');
-  },
+
 
   hideNavBar: true,
 

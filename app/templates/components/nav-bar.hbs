@@ -13,7 +13,7 @@
   <form class="navbar-form navbar-right">
     <div class="form-group">
 
-      <select disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
+      <select id="searchselect"disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
         {{#if prompt}}
           <option disabled selected={{is-not selection}}>
             {{prompt}}
@@ -26,8 +26,8 @@
         {{/each}}
       </select>
 
-      {{input type="text" value=keywords class="form-control" placeholder="Keyword(s)"}}
-      <button class='btn btn-warning'{{action 'searchBestBuy'}} type="submit">Search</button>
+      {{input id='searchinput' type="text" value=keywords class="form-control" placeholder="Keyword(s)"}}
+      <button id="searchbutton" class='btn btn-warning'{{action 'searchBestBuy'}} type="submit">Search</button>
     </div>
   </form>
   {{/unless}}
