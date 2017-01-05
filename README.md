@@ -10,7 +10,8 @@
 _This web application can save user's time, money, and disappointing trips back to stores by keeping track of favorite items and alerting users as soon as the "watched" item goes on SALE. Currently it works with an authorized BestBuy API to demonstrate proof of concept._
 
 
-## To see the live hosted site, please go to : _https://watchlist-f03db.firebaseapp.com/_
+## To see the live hosted site, please go to: 
+_https://watchlist-f03db.firebaseapp.com/_
 
 ## Setup/Installation Requirements
 * _Install and initiate node.js, bower, Ember, Ember CLI and npm if your local machine does not have them already._
