@@ -152,6 +152,10 @@ h5 {
   height: 34px;
 }
 
+#shrug{
+  font-size: 15em;
+  color: white;
+}
 .navbar a {
   font-size: 28px;
   margin-top: 10px;

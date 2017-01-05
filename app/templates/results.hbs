@@ -25,11 +25,13 @@
           <p>You save ${{product.dollarSavings}}!</p>
           <a href={{product.url}} target="_blank"><button>Buy Now</button></a>
           {{else}}
-          <button {{action 'addToList' product}}>Watch This!</button>
+          <button id={{product.upc}} {{action 'addToList' product}}>Watch This!</button>
         {{/if}}
       </div>
     {{/each}}
   {{else}}
+  <div id='shrug'>
     ¯\_(ツ)_/¯
+  </div>  
   {{/if}}
 </div>
