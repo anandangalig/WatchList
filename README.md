@@ -1,6 +1,6 @@
-# _WatchList: Group Project on Ember.js_
+# _WatchList_
 
-####_daw 11/10/2016_
+#### Group Project using Ember.js _11/10/2016_
 
 #### By _**Anand Angalig, Zach Baum, Ian Baum, and Rebecca Allen**_
 
@@ -10,7 +10,7 @@
 _This web application can save user's time, money, and disappointing trips back to stores by keeping track of favorite items and alerting users as soon as the "watched" item goes on SALE. Currently it works with an authorized BestBuy API to demonstrate proof of concept._
 
 
-## To see the live hosted site, please go to : https://watchlist-f03db.firebaseapp.com/
+## To see the live hosted site, please go to : _https://watchlist-f03db.firebaseapp.com/_
 
 ## Setup/Installation Requirements
 * _Install and initiate node.js, bower, Ember, Ember CLI and npm if your local machine does not have them already._
