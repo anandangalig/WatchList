@@ -1,37 +1,37 @@
 {{#unless hideNavBar}}
 <nav class="navbar navbar-default">
-<div class="container-fluid">
+  <div class="container-fluid">
 
-  <div class="navbar-header">
-    {{#link-to 'index'}}<a class="navbar-brand">Home</a>{{/link-to}}
-  </div>
-  <div class="navbar-header">
-    {{#link-to 'saved-list'}}<a class="navbar-brand"> MyWatchList</a>{{/link-to}}
-  </div>
+    <div class="navbar-header">
+      {{#link-to 'index'}}<a class="navbar-brand">Home</a>{{/link-to}}
+    </div>
+    <div class="navbar-header">
+      {{#link-to 'saved-list'}}<a class="navbar-brand"> YourWatchList</a>{{/link-to}}
+    </div>
 
-  {{#unless hideSearch}}
-  <form class="navbar-form navbar-right">
-    <div class="form-group">
+    {{#unless hideSearch}}
+    <form class="navbar-form navbar-right">
+      <div class="form-group">
 
-      <select id="searchselect"disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
-        {{#if prompt}}
+        <select id="searchselect" disabled={{disabled}} class="{{class}}" {{action 'change' on='change'}}>
+          {{#if prompt}}
           <option disabled selected={{is-not selection}}>
             {{prompt}}
           </option>
-        {{/if}}
-        {{#each content as |item|}}
+          {{/if}}
+          {{#each content as |item|}}
           <option value={{read-path item optionValuePath}}>
             {{read-path item optionLabelPath}}
           </option>
-        {{/each}}
-      </select>
+          {{/each}}
+        </select>
 
-      {{input id='searchinput' type="text" value=keywords class="form-control" placeholder="Keyword(s)"}}
-      <button id="searchbutton" class='btn btn-warning'{{action 'searchBestBuy'}} type="submit">Search</button>
-    </div>
-  </form>
-  {{/unless}}
+        {{input id='searchinput' type="text" value=keywords class="form-control" placeholder="Keyword(s)"}}
+        <button id="searchbutton" class='btn btn-warning' {{action 'searchBestBuy'}} type="submit">Search</button>
+      </div>
+    </form>
+    {{/unless}}
 
-</div>
+  </div>
 </nav>
 {{/unless}}
