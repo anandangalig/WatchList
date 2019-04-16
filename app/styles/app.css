@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .white-text {
   color: white;
 }
@@ -210,4 +205,33 @@ input:required {
 #thank_you,
 #add_watch_items {
   display: none;
+}
+@media only screen and (max-width: 600px) {
+  .loginTitle {
+    font-size: 5em;
+  }
+  #searchselect,
+  #searchinput {
+    margin-bottom: 10px;
+    background-color: white;
+    width: 100%;
+  }
+  .main {
+    padding-bottom: 50px;
+  }
+  .navbar a,
+  .navbar-default .navbar-header .navbar-brand {
+    margin: 0;
+  }
+  nav form.navbar-form.navbar-right {
+    border: none;
+    box-shadow: none;
+  }
+  .resultPanel {
+    width: auto;
+  }
+}
+
+.container-fluid {
+  border-bottom: thin solid orange;
 }
