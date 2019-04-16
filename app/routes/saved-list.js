@@ -10,26 +10,49 @@ export default Ember.Route.extend({
       this.transitionTo('results', url.request);
     },
     sendEmail() {
-      let name = document.getElementById('full_name').value;
+      const expression = /\S+@\S+/;
       let email = document.getElementById('email').value;
+      let emailValid = expression.test(String(email).toLowerCase());
+      let name = document.getElementById('full_name').value;
       let { items } = this.get('watchList');
-      console.log(items);
-      // bestSellingRank: 137696
-      // description: null
-      // dollarSavings: 0
-      // image: "https://img.bbystatic.com/BestBuy_US/images/products/5633/5633010_sa.jpg"
-      // name: "Sony - Alpha a99 II DSLR Camera (Body Only)"
-      // onSale: false
-      // regularPrice: 3199.99
-      // salePrice: 3199.99
-      // upc: "027242903326"
-      // url: "https://api.bestbuy.com/
 
-      emailjs.send('watchlist_gmail', 'template_Bs6RM6oG', {
-        to_name: name,
-        user_email: email,
-        product_name: 'Apple MacBookPro 13-inch',
-      });
+      if (!name) {
+        $('#full_name').attr('required', true);
+      } else {
+        $('#full_name').attr('required', false);
+      }
+
+      if (!email || !emailValid) {
+        $('#email').attr('required', true);
+      } else {
+        $('#email').attr('required', false);
+      }
+
+      if (!items.length) {
+        $('#add_watch_items').show();
+      }
+
+      if (name && emailValid && items.length) {
+        items.map(function(item) {
+          emailjs.send('watchlist_gmail', 'template_Bs6RM6oG', {
+            to_name: name,
+            user_email: email,
+            product_name: item.name,
+            product_link: item.url,
+            product_image: item.image,
+            sale_price: item.salePrice,
+          });
+        });
+
+        $('#full_name')
+          .attr('required', false)
+          .val('');
+        $('#email')
+          .attr('required', false)
+          .val('');
+        $('#thank_you').show();
+        $('#add_watch_items').hide();
+      }
     },
     deleteProduct(item) {
       this.get('watchList').remove(item);

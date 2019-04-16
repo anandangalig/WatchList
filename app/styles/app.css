@@ -201,3 +201,13 @@ input:-moz-placeholder {
   /* Firefox 18- */
   color: #ccc;
 }
+/* style all input elements with a required attribute */
+input:required {
+  border: 1px solid red;
+  outline: none;
+}
+
+#thank_you,
+#add_watch_items {
+  display: none;
+}

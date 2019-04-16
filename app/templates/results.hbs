@@ -25,6 +25,8 @@
     <p>Save ${{product.dollarSavings}} (from ${{product.regularPrice}})</p>
     <a href={{product.url}} target="_blank"><button>Buy Now</button></a>
     {{else}}
+    <p style="color:orange">Item not on sale</p>
+    <p>Full price: ${{product.regularPrice}}</p>
     <button id={{product.upc}} {{action 'addToList' product}}>Watch This!</button>
     {{/if}}
   </div>

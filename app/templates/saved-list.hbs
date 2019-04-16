@@ -8,7 +8,6 @@
   class='my-ember-select-widget'
   willChangeAction='selectOption'
   didChangeAction='anotherAction'
-
   searchBestBuy="searchBestBuy"
 }}
 
@@ -23,17 +22,18 @@
     <form class="row">
       <div class="col-sm-5">
         <label for="full_name">Your Name</label>
-        <input required type="text" id="full_name" class="form-control" name="full_name" placeholder="name" required="required" />
+        <input type="text" id="full_name" class="form-control" name="full_name" placeholder="name" />
       </div>
       <div class="col-sm-5">
         <label for="email">E-mail</label>
-        <input type="text" id="email" class="form-control" name="email" placeholder="email" required="required" />
+        <input type="text" id="email" class="form-control" name="email" placeholder="email" />
       </div>
       <div class="col-sm-2">
-        <input type="submit" value="Submit" class="btn btn-lg btn-success" {{action 'sendEmail'}} required="required" />
+        <input type="submit" value="Submit" class="btn btn-lg btn-success" {{action 'sendEmail'}} />
       </div>
     </form>
-
+    <p id="thank_you"> Test e-mail sent, check your email!</p>
+    <p id="add_watch_items"> Please add items to your WatchList first, then try again.</p>
   </div>
 
   {{display-list deleteProduct="deleteProduct"}}
