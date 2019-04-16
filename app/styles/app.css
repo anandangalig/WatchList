@@ -19,9 +19,10 @@ body {
   width: 250px;
   background-color: #fff;
   margin: 5px;
-  padding: 5px;
+  padding: 15px;
   text-align: center;
   height: 400px;
+  box-sizing: content-box;
 }
 
 .resultPanel img {
@@ -39,6 +40,17 @@ a {
   text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05),
     -10px 20px 5px rgba(0, 0, 0, 0.05);
   text-decoration: underline;
+}
+.container__watchlist h1 {
+  color: #edf0f1;
+  font-weight: lighter;
+  font-size: 5em;
+  margin: 5% 0 5% 0;
+  text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05),
+    -10px 20px 5px rgba(0, 0, 0, 0.05);
+}
+.container__watchlist form {
+  margin-bottom: 15px;
 }
 
 .saletag {
@@ -87,7 +99,7 @@ body {
   color: #333;
 }
 
-input {
+/* input {
   border-radius: 3px;
   border-style: hidden;
   width: 300px;
@@ -97,7 +109,7 @@ input {
   color: #333;
   box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05),
     -10px 20px 5px rgba(0, 0, 0, 0.05);
-}
+} */
 
 .nameInput {
   width: 149px;
@@ -151,9 +163,11 @@ h5 {
 }
 #testemail {
   background-color: #edf0f1;
-  margin: 2% 10%;
   padding: 1% 2%;
   border-radius: 5px;
+}
+#testemail input.btn {
+  margin-top: 20px;
 }
 
 #searchinput,

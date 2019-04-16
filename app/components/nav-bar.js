@@ -16,7 +16,7 @@ export default Ember.Component.extend({
     }
   },
 
-actions: {
+  actions: {
     change: function() {
       let selectedIndex = this.$('select')[0].selectedIndex;
       let content = this.get('content');
@@ -37,30 +37,33 @@ actions: {
 
       // this.sendAction('didChangeAction', _selection.value);
       this.set('selectedCategory', _selection.value);
-      console.log(this.get('selectedCategory'));
     },
 
     searchBestBuy() {
       var apiKey = 'dDNhiwh8mUbK6pzaUfGxynag';
       var selectedCategory = this.get('selectedCategory');
 
-      var keywords = this.get('keywords').split(" ");
+      var keywords = this.get('keywords').split(' ');
       var outputString = '';
-      keywords.forEach(function(word, i){
+      keywords.forEach(function(word, i) {
         if (i === 0) {
-          outputString += "search=" + word;
+          outputString += 'search=' + word;
         } else {
-          outputString += "&search=" + word;
+          outputString += '&search=' + word;
         }
       });
 
-      console.log(apiKey);
       var url = {
-        request: "https://api.bestbuy.com/v1/products((" + outputString + ")&(categoryPath.id=" + selectedCategory + "))?apiKey=" + apiKey + "&sort=bestSellingRank.dsc&show=name,salePrice,regularPrice,description,bestSellingRank,onSale,upc,url,image,dollarSavings&pageSize=100&format=json"
+        request:
+          'https://api.bestbuy.com/v1/products((' +
+          outputString +
+          ')&(categoryPath.id=' +
+          selectedCategory +
+          '))?apiKey=' +
+          apiKey +
+          '&sort=bestSellingRank.dsc&show=name,salePrice,regularPrice,description,bestSellingRank,onSale,upc,url,image,dollarSavings&pageSize=100&format=json',
       };
-
-      console.log(url.request);
       this.sendAction('searchBestBuy', url);
     },
-  }
+  },
 });

@@ -13,11 +13,27 @@
 }}
 
 
-<div class="container">
-  <h1>My WatchList</h1>
+<div class="container container__watchlist">
+  <h1>Your WatchList</h1>
   <div id="testemail">
-    <p>This part of the App uses Email.js to send sale alerts to users if an item from their WatchList goes on SALE. The app will pull "On Sale" data from BestBuy API and automatically send an alert email if a matching item is found. Currently, the process is manual and for proof of concept it sends an email to us.</p>
-    <button class="btn btn-lg btn-success" {{action 'sendEmail'}}>Send Test Email</button>
+    <p>Proof of concept: A notification is to be sent when WatchList items go on sale.</p>
+    <p>To test it manually, add few items to the WatchList and submit this form. Currently we are using <a
+        href="http://www.emailjs.com/">Email.js</a></p>
+
+    <form class="row">
+      <div class="col-sm-5">
+        <label for="full_name">Your Name</label>
+        <input required type="text" id="full_name" class="form-control" name="full_name" placeholder="name" required="required" />
+      </div>
+      <div class="col-sm-5">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" class="form-control" name="email" placeholder="email" required="required" />
+      </div>
+      <div class="col-sm-2">
+        <input type="submit" value="Submit" class="btn btn-lg btn-success" {{action 'sendEmail'}} required="required" />
+      </div>
+    </form>
+
   </div>
 
   {{display-list deleteProduct="deleteProduct"}}
